@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "tqecd"
-version = "0.2.0"
+version = "0.2.1"
 authors = [
     { name = "TQEC community", email = "tqec-design-automation@googlegroups.com" },
 ]
@@ -35,7 +35,7 @@ classifiers = [
     "Typing :: Typed",
 ]
 dependencies = [
-    "numpy>=1.22,<2.3",                      # Upper bound: https://github.com/tqec/tqec/pull/659
+    "numpy>=1.22",
     "numpy>=1.24; python_version >= '3.11'",
     "numpy>=1.26; python_version >= '3.12'",
     "numpy>=2.1; python_version >= '3.13'",
@@ -56,9 +56,9 @@ doc = [
     "pandoc<=2.4",
     "jupyter<=1.1.1",
 ]
-test = ["pytest<=9.1.0", "mypy<=2.1.0", "pytest-cov<=7.1.0"]
+test = ["pytest<=9.1.0", "mypy<=2.3.0", "pytest-cov<=7.1.0"]
 bench = ["pyinstrument<=5.1.1"]
-dev = ["pre-commit<=4.6.0", "tqecd[test, doc, bench]","ruff<=0.15.4",]
+dev = ["pre-commit<=4.6.0", "tqecd[test, doc, bench]","ruff<=0.16.0",]
 all = ["tqecd[test, dev, doc, bench]"]
 
 [tool.setuptools]
